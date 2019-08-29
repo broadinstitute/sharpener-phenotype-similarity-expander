@@ -11,8 +11,8 @@ from swagger_server.models.transformer_query import TransformerQuery  # noqa: E5
 from swagger_server.test import BaseTestCase
 
 
-class TestDefaultController(BaseTestCase):
-    """DefaultController integration test stubs"""
+class TestTransformerController(BaseTestCase):
+    """TransformerController integration test stubs"""
 
     def test_transform_post(self):
         """Test case for transform_post
@@ -21,7 +21,7 @@ class TestDefaultController(BaseTestCase):
         """
         query = TransformerQuery()
         response = self.client.open(
-            '/depmap_expander/transform',
+            '/phenotype_similarity_expander/transform',
             method='POST',
             data=json.dumps(query),
             content_type='application/json')
@@ -31,10 +31,10 @@ class TestDefaultController(BaseTestCase):
     def test_transformer_info_get(self):
         """Test case for transformer_info_get
 
-        
+        Retrieve transformer info
         """
         response = self.client.open(
-            '/depmap_expander/transformer_info',
+            '/phenotype_similarity_expander/transformer_info',
             method='GET')
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))

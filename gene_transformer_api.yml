@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
-  title: API for gene-list transformers
+  title: API for an expander based on phenotype similarity
   version: 1.1.0
-  description: API for gene-list transformers.
+  description: Gene-list expander based on phenotype similarity.
 host: sharpener.ncats.io
-basePath: /<transformer-path>
+basePath: /phenotype_similarity_expander
 schemes:
 - "https"
 

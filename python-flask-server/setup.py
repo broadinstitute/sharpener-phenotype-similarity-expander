@@ -3,8 +3,8 @@
 import sys
 from setuptools import setup, find_packages
 
-NAME = "sharpener-phenotype-similarity-expander"
-VERSION = "1.0.1"
+NAME = "phenotype-similarity-expander"
+VERSION = "1.1.0"
 
 # To install the library, run the following
 #

@@ -1,11 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  description: "Gene-list expander based on DepMap gene-knockdown correlations"
+  description: "Gene-list expander based on phenotype similarity"
   version: "1.0.0.0"
-  title: "API for an expander based on DepMap gene-knockdown correlations"
-host: "indigo.ncats.io"
-basePath: "/depmap_expander"
+  title: "API for an expander based on phenotype similarity"
+host: "localhost:8080"
+basePath: "/phenotype_similarity_expander"
 paths:
   /transformer_info:
     get:

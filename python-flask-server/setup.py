@@ -3,8 +3,8 @@
 import sys
 from setuptools import setup, find_packages
 
-NAME = "sharpener-phenotype-similarity-expander"
-VERSION = "1.0.1"
+NAME = "phenotype-similarity-expander"
+VERSION = "1.1.0"
 
 # To install the library, run the following
 #
@@ -29,7 +29,7 @@ setup(
     entry_points={
         'console_scripts': ['swagger_server=swagger_server.__main__:main']},
     long_description="""\
-    Gene-list expander based on phenotype similarity
+    Gene-list expander based on phenotype similarity.
     """
 )
 

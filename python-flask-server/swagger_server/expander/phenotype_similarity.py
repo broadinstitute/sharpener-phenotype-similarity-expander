@@ -7,7 +7,7 @@ from swagger_server.models.gene_info_identifiers import GeneInfoIdentifiers
 from swagger_server.models.attribute import Attribute
 
 import requests
-from translator_modules.module1.module1b import PhenotypicallySimilarGenes
+from translator_modules.gene.gene.phenotype_similarity import PhenotypicallySimilarGenes
 
 NAME = 'Phenotype similarity'
 

@@ -6,28 +6,23 @@ from swagger_server.models.gene_info import GeneInfo
 from swagger_server.models.gene_info_identifiers import GeneInfoIdentifiers
 from swagger_server.models.attribute import Attribute
 
+import json
 import requests
 from translator_modules.gene.gene.phenotype_similarity import PhenotypicallySimilarGenes
 
 NAME = 'Phenotype similarity'
+THRESHOLD = 'similarity threshold'
 
 def expander_info():
     """
         Return information for this expander
     """
-    return TransformerInfo(
-        name = NAME,
-        function = 'expander',
-        description = 'Phenotype similarity with shared HPO terms',
-        parameters = [
-            Parameter(
-                name='similarity threshold',
-                type='double',
-                default='0.5'
-            )
-        ],
-        required_attributes = ['.gene_id','gene_symbol']
-    )
+    global NAME, THRESHOLD
+    with open("transformer_info.json",'r') as f:
+        info = TransformerInfo.from_dict(json.loads(f.read()))
+        NAME = info.name
+        THRESHOLD = info.parameters[0].name
+        return info
 
 
 def expand(query: TransformerQuery):
@@ -36,7 +31,7 @@ def expand(query: TransformerQuery):
     """
     controls = {control.name: control.value for control in query.controls}
 
-    threshold = float(controls['similarity threshold'])
+    threshold = float(controls[THRESHOLD])
     gene_list = []
     genes = {}
     for gene in query.genes:

@@ -1,0 +1,21 @@
+{
+    "name": "HPO phenotype similarity",
+    "url": "https://sharpener.ncats.io/phenotype_similarity_expander",
+    "status": "online",
+    "function": "expander",
+    "description": "Gene-list expander based on phenotype similarity using shared terms from Human Phenotype Ontology (https://hpo.jax.org/app/).",
+    "parameters": [
+        {
+            "default": "0.5",
+            "name": "similarity threshold",
+            "type": "double",
+            "allowed_values": null,
+            "suggested_values": null,
+            "lookup_url": null
+        }
+    ],
+    "required_attributes": [
+        ".gene_id",
+        "gene_symbol"
+    ]
+}

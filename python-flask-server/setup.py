@@ -18,10 +18,10 @@ REQUIRES = ["connexion"]
 setup(
     name=NAME,
     version=VERSION,
-    description="API for an expander based on phenotype similarity",
+    description="HPO phenotype similarity",
     author_email="",
     url="",
-    keywords=["Swagger", "API for an expander based on phenotype similarity"],
+    keywords=["Swagger", "HPO phenotype similarity"],
     install_requires=REQUIRES,
     packages=find_packages(),
     package_data={'': ['swagger/swagger.yaml']},
@@ -29,7 +29,7 @@ setup(
     entry_points={
         'console_scripts': ['swagger_server=swagger_server.__main__:main']},
     long_description="""\
-    Gene-list expander based on phenotype similarity.
+    Gene-list expander based on phenotype similarity using shared  terms from Human Phenotype Ontology (https://hpo.jax.org/app/).
     """
 )
 

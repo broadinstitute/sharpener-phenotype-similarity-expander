@@ -1,3 +1,33 @@
 connexion == 1.1.15
 python_dateutil == 2.6.0
 setuptools >= 21.0.0
+
+# translator-modules requirements
+
+requests>=2.21.0
+rdflib
+#
+# pandas >=0.24 causes a strange runtime TypeError in this workflow,
+# so we downgrade to 0.23.4 for now; note that numpy also probably
+# needs to be pinned to a compatible corresponding release (1.16.1 seems ok?)
+scipy>=1.2.1
+numpy==1.16.1
+pandas==0.24.2
+jinja2
+pyyaml==5.1
+#
+typing>=0.0
+graphviz
+#
+html3
+aiohttp
+fire==0.2.1
+#
+# NCATS Dependencies
+#
+mvp-module-library>=0.1.0
+ontobio
+biolink-model
+biolinkml
+biothings_client
+

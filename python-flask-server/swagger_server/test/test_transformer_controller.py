@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from flask import json
 from six import BytesIO
 
+from swagger_server.models.error_msg import ErrorMsg  # noqa: E501
 from swagger_server.models.gene_info import GeneInfo  # noqa: E501
 from swagger_server.models.transformer_info import TransformerInfo  # noqa: E501
 from swagger_server.models.transformer_query import TransformerQuery  # noqa: E501

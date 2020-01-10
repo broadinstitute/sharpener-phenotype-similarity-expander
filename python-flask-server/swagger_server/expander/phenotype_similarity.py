@@ -30,14 +30,14 @@ def expand(query: TransformerQuery):
         Execute this expander, find all genes correlated to query genes.
     """
     controls = {control.name: control.value for control in query.controls}
-    print(controls)
+
     threshold = float(controls[THRESHOLD])
     gene_list = []
     genes = {}
     for gene in query.genes:
         gene_list.append(gene)
         genes[gene.gene_id] = gene
-    print ("len =",len(gene_list))
+
     psg = PhenotypicallySimilarGenes(query.genes, threshold)
     results = psg.results.to_dict('records') if len(psg.results)>0 else []
 

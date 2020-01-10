@@ -1,15 +1,23 @@
 {
     "name": "HPO phenotype similarity",
-    "url": "https://sharpener.ncats.io/phenotype_similarity_expander",
-    "status": "online",
+    "label": "HPO similarity",
+    "version": "1.3.0",
     "function": "expander",
     "description": "Gene-list expander based on phenotype similarity using shared terms from Human Phenotype Ontology (https://hpo.jax.org/app/).",
+    "properties": {
+        "list_predicate": "related_to",
+        "member_predicate": "related_to",
+        "source_url": "https://hpo.jax.org/app/",
+        "method": "similarity"
+    },
     "parameters": [
         {
             "default": "0.5",
             "name": "similarity threshold",
             "type": "double",
+            "biolink_class": null,
             "allowed_values": null,
+            "allowed_range": [0.0 , 1.0],
             "suggested_values": null,
             "lookup_url": null
         }

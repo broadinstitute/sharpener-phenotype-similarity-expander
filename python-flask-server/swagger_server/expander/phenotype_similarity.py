@@ -8,7 +8,7 @@ from swagger_server.models.attribute import Attribute
 
 import json
 import requests
-from translator_modules.gene.gene.phenotype_similarity import PhenotypicallySimilarGenes
+from ncats.translator.modules.gene.gene.phenotype_similarity import PhenotypicallySimilarGenes
 
 NAME = 'Phenotype similarity'
 THRESHOLD = 'similarity threshold'
